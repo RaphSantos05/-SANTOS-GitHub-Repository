@@ -105,7 +105,10 @@ def interest(principal, rate, periods):
     '''
     # Replace `pass` with your code.
     # Stay within the function. Only use the parameters as input. The function should return your answer.
-    pass
+    def interest(principal, rate, periods):
+        simple_interest = int(principal)*(float(rate)*int(periods))
+        final_value = int(principal) + simple_interest
+        return int(final_value)
 
 def body_mass_index(weight, height):
     '''Body Mass Index.
@@ -141,4 +144,10 @@ def body_mass_index(weight, height):
     '''
     # Replace `pass` with your code.
     # Stay within the function. Only use the parameters as input. The function should return your answer.
-    pass
+    def body_mass_index(weight, height):
+        metric_weight = float(weight)*0.453592
+        metric_feet = height [0]
+        metric_inch = height [1]
+        metric_height = (height_feet*0.3048) + (height_inch*0.0254) 
+        bmi = (metric_weight)/(metric_height ** 2)
+        return float(bmi)
