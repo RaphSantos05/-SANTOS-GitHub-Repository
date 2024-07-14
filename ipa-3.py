@@ -43,8 +43,8 @@ def relationship_status(from_member, to_member, social_graph):
     # Stay within the function. Only use the parameters as input. The function should return your answer.
     
     if from_member in social_graph and to_member in social_graph:
-        to_from = from_member in social_graph [to_member][following]
-        from_to = to_member in social_graph [from_member][following]
+        to_from = from_member in social_graph [to_member]["following"]
+        from_to = to_member in social_graph [from_member]["following"]
 
         if to_from and from_to:
             return "friends"
@@ -149,7 +149,7 @@ def eta(first_stop, second_stop, route_map):
     '''
     # Replace `pass` with your code.
     # Stay within the function. Only use the parameters as input. The function should return your answer.
-    
+
     trip_duration = 0
     present_stop = first_stop
     for (from_stop, to_stop) in route_map:
