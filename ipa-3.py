@@ -150,16 +150,16 @@ def eta(first_stop, second_stop, route_map):
     # Replace `pass` with your code.
     # Stay within the function. Only use the parameters as input. The function should return your answer.
 
-    trip_duration = 0
+    travel_duration = 0
     present_stop = first_stop
     for (from_stop, to_stop) in route_map:
         if present_stop == second_stop:
-            trip_duration += route_map[(from_stop, to_stop)]["trip_duration_mins"]
+            travel_duration += route_map[(from_stop, to_stop)]["travel_time_mins"]
     while present_stop != second_stop:
         for (from_stop, to_stop) in route_map:
             if from_stop == present_stop:
-                trip_duration += route_map[(from_stop, to_stop)]["trip_duration_mins"]
+                travel_duration += route_map[(from_stop, to_stop)]["travel_time_mins"]
                 present_stop = to_stop
                 break
     
-    return trip_duration
+    return travel_duration
