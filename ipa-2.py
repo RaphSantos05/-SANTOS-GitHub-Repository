@@ -75,8 +75,8 @@ def caesar_cipher(message, shift):
     for char in message:
         if char.isalpha(): 
             index = alphabet.index(char)  
-            shift = (index + int(shift)) % 26  
-            shifted_message += alphabet[shift] 
+            shifted = (index + int(shift)) % 26  
+            shifted_message += alphabet[shifted] 
         else:
             shifted_message += char 
     
